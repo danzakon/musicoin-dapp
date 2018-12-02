@@ -3,7 +3,6 @@ var getGanacheAddress = function() {
 }
 
 var getERC721Address = function() {
-    // TODO: update this with the correct squiggle token address
     return '0x7b1bd87fc5462ae90a0245f7c6f876461c9797dd';
 };
 
