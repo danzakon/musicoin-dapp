@@ -8,7 +8,7 @@ import "./Ownable.sol";
  * @title ERC721 Non-Fungible Token Standard basic implementation
  * @dev see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721 is ERC165, IERC721 {
+contract ERC721 is IERC721, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
