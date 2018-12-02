@@ -28,6 +28,10 @@ var defaultAccount;
 var contractLoaded;
 var selectedSquiggle;
 
+var wavesurfer = WaveSurfer.create({
+    container: '#waveform'
+});
+
 var chooseSquiggle = function(index) {
     if (index >= 0) {
         selectedSquiggle = index;
