@@ -229,7 +229,7 @@ var initializeUI = function() {
     var headerDiv2 = document.createElement('th');
     headerDiv2.innerText = 'ETH Balance';
     var headerDiv3 = document.createElement('th');
-    headerDiv3.innerText = 'SQGL Balance';
+    headerDiv3.innerText = 'Tune Balance';
     headerRowDiv.appendChild(headerDiv1);
     headerRowDiv.appendChild(headerDiv2);
     headerRowDiv.appendChild(headerDiv3);
