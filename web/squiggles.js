@@ -77,9 +77,9 @@ var updateAccounts = async function(selectLastSquiggle) {
         var currAccount = eth.accounts[i];
         var bal = await getSquiggleBalance(currAccount);
         if (currAccount === squiggleContractOwner) {
-            outputSpan.innerText = `Owner Squiggles: ${bal}`;
+            outputSpan.innerText = `Owner Songs: ${bal}`;
         } else {
-            outputSpan.innerText = `Squiggles: ${bal}`;
+            outputSpan.innerText = `Songs: ${bal}`;
         }
         var ethBal = await getEthBalance(currAccount);
         ethBalanceSpan.innerText = ethBal.dividedBy(1000000000000000000).toString(10);
@@ -105,9 +105,9 @@ var updateAccounts = async function(selectLastSquiggle) {
                 }
                 var headerRow = document.createElement('tr');
                 var header1 = document.createElement('th');
-                header1.innerText = 'Squiggle Id';
+                header1.innerText = 'Song Id';
                 var header2 = document.createElement('th');
-                header2.innerText = 'Squiggle Value';
+                header2.innerText = 'Song Value';
                 header2.className = 'squiggle-value';
                 headerRow.appendChild(header1);
                 headerRow.appendChild(header2);
@@ -115,7 +115,7 @@ var updateAccounts = async function(selectLastSquiggle) {
                 divSquiggleRendering.style.visibility = 'visible';
             } else {
                 chooseSquiggle(-1);
-                divSquigglesList.innerText = 'No Squiggles Owned!';
+                divSquigglesList.innerText = 'No Songs Owned!';
                 divSquiggleRendering.style.visibility = 'hidden';
             }
             for (var i = 0; i < res.length; ++i) {
