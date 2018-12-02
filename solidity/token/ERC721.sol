@@ -1,7 +1,7 @@
 pragma solidity ^0.4.24;
 
 import "./SafeMath.sol";
-import "token/IERC721.sol";
+import "./IERC721.sol";
 import "./Ownable.sol";
 
 contract ERC721 is IERC721, Ownable {
@@ -108,31 +108,4 @@ contract ERC721 is IERC721, Ownable {
     // function transferAnyERC721Token(address erc721Address, uint _tokenId) public onlyOwner returns (bool) {
     //     return IERC721(erc721Address).transfer(owner, _tokenId);
     // }
-}
-
-contract Moonlight is ERC721Token {
-
-    mapping (uint => uint) tokenToSquiggle;
-
-    constructor() public {
-        symbol = "SQGL";
-        name = "Squiggle";
-        allSupply = 0;
-    }
-
-    function createRandomSquiggle(address _to) public onlyOwner {
-        uint squiggle = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, _to)));
-
-        uint newTokenId = allSupply;
-        allSupply++;
-
-        tokenToSquiggle[newTokenId] = squiggle;
-        assignToken(_to, newTokenId);
-
-        emit Transfer(address(0), _to, newTokenId);
-    }
-
-    function getSquiggle(uint _tokenId) public view returns (uint) {
-        return tokenToSquiggle[_tokenId];
-    }
 }
