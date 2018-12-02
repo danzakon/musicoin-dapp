@@ -1,1 +1,59 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musicoin</title>
+    <script src='./node_modules/bignumber/bignumber.min.js'></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="./squiggles.css"></link>
+</head>
+
+<body>
+    Musicoin Token
+    <table id="accounts-list">
+    </table>
+    <button id="btnUpdate" type="text">Update Balances</button>
+
+    <div id="curr-account-div" class="current-account">
+        <span>
+            Current Account:
+        </span>
+        <span id="curr-account"></span>
+        <button id="btnToggle">Toggle Account</button>
+        <button id="btnOwner">Select Owner</button>
+    </div>
+    <div class="target-amount">
+        <div class="target-account">
+            <label for="transfer-account">Target Account:</label>
+            <input id="transfer-account"></input>
+        </div>
+        <label for="transfer-id">Musicoin ID to Transfer:</label>
+        <input id="transfer-id" type="number"></input>
+        <button id="btnTransfer">Transfer Squiggle</button>
+    </div>
+    <div id="create-info" class="create-info">
+        <label for="create-address">Create Musicoin For:</label>
+        <input id="create-address"></input>
+        <br>
+        <button id="btnCreateSquiggle">Create Squiggle</button>
+    </div>
+    <table id="squiggles-list">
+        <tr>
+            <th>Squiggle Id</th>
+            <th>Squiggle Value</th>
+        </tr>
+    </table>
+    <div id="squiggle-rendering">
+        <div>Squiggle Rendering:</div>
+        <canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;"></canvas>
+    </div>
+
+    <!--<script src="./addresses.js"></script>
+    <script src="./render.js"></script>
+    <script src="./squiggles.js"></script> -->
+
+</body>
+
+</html>
